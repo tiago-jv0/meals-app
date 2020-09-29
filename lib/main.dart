@@ -30,7 +30,9 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Deli Meals'),
       ),
-      body: Center(child: Text('Navigation Time'),),
-    )
+      body: Center(
+        child: Text('Navigation Time'),
+      ),
+    );
   }
 }
