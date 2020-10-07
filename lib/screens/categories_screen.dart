@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 
+import '../dummy_data.dart';
+import '../widgets/category_item.dart';
+
 class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView(
-      children: [],
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+      children: DUMMY_CATEGORIES.map((category) {
+        return CategoryItem(
+          title: category.title,
+          color: category.color,
+          id: category.id,
+        );
+      }).toList(),
       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,
           childAspectRatio: 3 / 2,
